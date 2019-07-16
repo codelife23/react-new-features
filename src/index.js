@@ -1,10 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import NoteApp from './components/NoteApp';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
+
+// const App = (props) => {
+//     const [count, setCount] = useState(props.count)
+//     const [text, setText] = useState('')
+
+//     useEffect(() => {
+//         console.log('This should only run once!')
+//     }, [])
+
+//     useEffect(() => {
+//         console.log('use ran');
+//         document.title = count;
+//     }, [count])
+
+//     return(
+//         <div>
+//             <p>The current {text || 'count'} is {count}</p>
+//             <button onClick={() => setCount(count - 1)}>-1</button>
+//             <button onClick={() => setCount(count + 1)}>+1</button>
+//             <button onClick={() => setCount(props.count)}>reset</button>
+//             <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
+//         </div>
+//     )
+// }
+
+ReactDOM.render(<NoteApp />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
